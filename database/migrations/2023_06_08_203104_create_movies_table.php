@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
+
+            $table->string("title");
+            $table->string("gender");
+
+            $table->unsignedBigInteger("director_id");
+            $table->foreign("director_id")->references("id")->on("directors");
+            
             $table->timestamps();
         });
     }
