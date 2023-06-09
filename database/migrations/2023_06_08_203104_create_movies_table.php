@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->string("title");
-            $table->string("gender");
+            $table->string("genre");
 
             $table->unsignedBigInteger("director_id");
             $table->foreign("director_id")->references("id")->on("directors");
