@@ -41,9 +41,9 @@ type Mutation {
 
   deleteDirector(id: ID! @whereKey): Director @delete
 
-  createMovie(title: String!, genre: String!): Movie @create
+  createMovie(title: String!, genre: String!, director_id: ID!): Movie @create
 
-  updateMovie(id: ID!, title: String!, genre: String!): Movie @update
+  updateMovie(id: ID!, title: String!, genre: String!, director_id: ID!): Movie @update
 
   deleteMovie(id: ID! @whereKey): Movie @delete
 
