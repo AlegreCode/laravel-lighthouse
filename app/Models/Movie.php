@@ -11,10 +11,11 @@ class Movie extends Model
 
     protected $fillable = [
         "title",
-        "gender",
+        "genre",
+        "director_id",
     ];
 
-    public function directors() {
+    public function director() {
         return $this->belongsTo(Director::class);
     }
 }
